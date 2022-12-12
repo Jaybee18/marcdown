@@ -1,3 +1,7 @@
+# Design
+![preview1](images/preview1.png)
+
+![preview2](images/preview2.png)
 # Build
 ```
 npm run make

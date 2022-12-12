@@ -69,3 +69,7 @@
 body {
     margin: 0;
 }
+
+textarea.textfield::-webkit-scrollbar, .renderview::-webkit-scrollbar {
+    display: none;
+}
