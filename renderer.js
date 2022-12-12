@@ -37,3 +37,18 @@ closebtn.addEventListener("click", () => {
     console.log("close")
     electron.ipcRenderer.invoke("close");
 });
+
+// key events
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key === "s") {
+    e.preventDefault();
+    electron.ipcRenderer.invoke("save", textfield.value);
+  } else if (e.ctrlKey && e.key === "o") {
+    e.preventDefault();
+    electron.ipcRenderer.invoke("open").then((v) => {
+      if (v === undefined) return;
+      textfield.value = v;
+      render();
+    });
+  }
+});

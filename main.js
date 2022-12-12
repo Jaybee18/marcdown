@@ -1,6 +1,7 @@
 const path = require('path');
+const fs = require("fs");
 
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const { setVibrancy } = require("electron-acrylic-window");
 
 function createWindow() {
@@ -27,6 +28,24 @@ function createWindow() {
   // listen for close event
   ipcMain.handle("close", () => {
     app.quit();
+  });
+
+  // listen for save event
+  ipcMain.handle("save", (e, content) => {
+    dialog.showSaveDialog(win, {defaultPath: "notes.md"}).then(result => {
+      if (result !== undefined) {
+        fs.writeFileSync(result.filePath, content);
+      }
+    });
+  });
+
+  // listen for open event
+  ipcMain.handle("open", (e) => {
+    let paths = dialog.showOpenDialogSync(win, {
+      properties: ["openFile"]
+    });
+    if (paths === undefined) {return undefined;}
+    return fs.readFileSync(paths[0]).toString();
   });
 }
 
