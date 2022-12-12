@@ -7,8 +7,27 @@ let renderview = document.querySelector(".renderview");
 let resizehandle = document.querySelector(".resizehandle");
 let draghandle = document.querySelector(".toolbar");
 
+var encodedStr = rawStr => rawStr.replace(/[\u00A0-\u9999<>\&]/g, function(i) {
+  return '&#'+i.charCodeAt(0)+';';
+});
+
+function custom_parse(input) {
+  let res = input;
+  res = res.replaceAll("==>", "\u27f9");
+  res = res.replaceAll("=>", "\u21d2");
+  res = res.replaceAll("-->", "\u27f6");
+  res = res.replaceAll("->", "\u2192");
+  res = res.replaceAll("+-", "\u00b1");
+  res = res.replaceAll("=/=", "\u2260");
+  res = res.replaceAll(">=", "\u2265");
+  res = res.replaceAll("<=", "\u2264");
+  return encodedStr(res);
+}
+
 function render() {
-    parse(textfield.value, (err, res) => {
+  // some slight custom modifications like => and ⇒
+  let input = custom_parse(textfield.value);
+    parse(input, (err, res) => {
         renderview.innerHTML = res;
     });
 }
