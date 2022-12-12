@@ -1,3 +1,6 @@
+# marcdown
+A macOS inspired, extremely minimalistic and fast live markdown editor with GitHub's markdown theme.
+
 # Design
 ![preview1](images/preview1.png)
 
