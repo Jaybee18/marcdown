@@ -1,7 +1,8 @@
 # Design
 ![preview1](images/preview1.png)
 
-![preview2](images/preview2.png)
+![preview3](images/preview3.png)
+
 # Develop
 make sure all node modules are installed, then run
 ```
