@@ -2,11 +2,18 @@
 ![preview1](images/preview1.png)
 
 ![preview2](images/preview2.png)
+# Develop
+make sure all node modules are installed, then run
+```
+npm run start
+```
+
 # Build
 ```
+npm install
 npm run make
 ```
-run above command to build
+run above commands to install all required node modules and build the app
 
 output files will be located in the ./out directory
 
