@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a95d7f2b70.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="app">
+            <!-- the main text editor -->
+            <div class="editor">
+                <textarea
+                class="textfield" 
+                spellCheck="false"
+                placeholder="Write something ..."></textarea>
+            </div>
+            <!-- resize handle for the text field and the render view -->
+            <div class="resizehandle"></div>
+            <!-- main markdown render view -->
+            <div class="renderview"></div>
+            <!-- toolbar -->
+            <div class="toolbar">
+                <div class="draghandle"></div>
+                <div class="closebtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <script src="renderer.js"></script>
+    </body>
+</html>
