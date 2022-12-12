@@ -1,0 +1,27 @@
+{
+  "name": "marcdown",
+  "version": "1.0.0",
+  "description": "minimalistic markdown editor",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Jan Bessler",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "electron-acrylic-window": "^0.5.11",
+    "electron-squirrel-startup": "^1.0.0",
+    "marked": "^4.2.4"
+  }
+}

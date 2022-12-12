@@ -1,0 +1,71 @@
+.editor {
+    width: 30%;
+    min-width: 10%;
+    max-width: 90%;
+}
+
+.textfield {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff0f;
+    border: none;
+    outline: none;
+    resize: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.resizehandle {
+    width: 8px;
+    height: 100vh;
+    margin: 0 -4px;
+    z-index: 1;
+    cursor: e-resize;
+  }
+
+.toolbar {
+    width: 70%;
+    height: 25px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.draghandle {
+    flex: 1;
+    height: 100%;
+    -webkit-app-region: drag;
+}
+
+.closebtn {
+    color: #444444;
+}
+
+.renderview {
+    text-align: center;
+    width: 70%;
+    height: 100vh;
+    text-align: left;
+    color: white;
+    background-color: #181818;
+    box-sizing: border-box;
+    padding-left: 10px;
+    overflow-y: auto;
+    min-width: 10%;
+    max-width: 90%;
+    font-family: system-ui;
+  }
+
+.app {
+    display: flex;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+}
